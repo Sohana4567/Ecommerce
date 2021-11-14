@@ -1,0 +1,20 @@
+@mixin  commonabsolute {
+    content: "";
+    width:100%;
+    height:100%;
+    position: absolute;
+    transition:all 0.3s;
+}
+@mixin commonflex($par1,$par2){
+    display: flex;
+        justify-content:$par1;
+        align-items: $par2;
+        
+}
+@mixin  commonwidthheight($par1,$par2) {
+    width:$par1;
+    height: $par2;
+}
+@mixin  commonfontproblem($par1) {
+    font-size: $par1;
+}

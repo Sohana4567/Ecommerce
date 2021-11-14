@@ -1,0 +1,23 @@
+@import './variable';
+.menu-tab{
+    display: flex;
+    justify-content:space-evenly;
+    
+    & .btn{
+        border:1px solid $lightblue;
+        background: none;
+        padding:0.625rem  $font-size;
+        font-size: $font-size;
+        
+        cursor: pointer;
+    }
+    & .btn1{
+        color:$lightblue;
+
+        &:hover{
+            background-color:$lightblue;
+            color:$white;
+        }
+    }
+    
+}

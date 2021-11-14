@@ -1,0 +1,25 @@
+@import './variable';
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:1rem 0 3rem 0;
+
+    & li{
+        margin:0 0.625rem;
+
+    }
+    a{
+        text-decoration:none;
+
+        & i{
+            font-size: 13.6rem - 12.5rem;
+           transition: color .4s ease;
+
+        }
+        &:hover i{
+            color: $aqua;
+        }
+    }
+}

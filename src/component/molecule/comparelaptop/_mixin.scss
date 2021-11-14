@@ -1,0 +1,7 @@
+@mixin commonmargin($par1,$par2){
+    margin-top: $par1;
+    font-size:$par2;
+}
+@mixin commonwidth($par1) {
+    width:$par1;
+}

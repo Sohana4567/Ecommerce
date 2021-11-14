@@ -1,0 +1,155 @@
+@import './variable';
+@import './mixin';
+@import './media';
+
+
+.menu-item{
+    
+    @include commonflexprob(row,flex-start);
+    align-items: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+    width: 85%;
+    margin:0 auto;
+
+ .box{
+    flex:1 1 20rem;
+    border:.1rem solid $lightblack;
+     overflow: hidden;
+    margin:1rem 2rem;  
+    position: relative;
+     .image{
+          height: 20rem;
+         text-align: center;
+          background:$lightwhite;
+          img{
+              height: 100%;
+              object-fit: cover;
+              max-width: 30rem;
+          }
+      }
+      .info{
+         h3{
+             padding:1rem;
+            //  font-size: 2rem;
+             @include  commonfontsize(2rem);
+            color:$lightblue;
+         }
+        .subInfo{
+             display: flex;
+             align-items: center;
+             justify-content: space-between;
+             padding:1rem;
+              border-top: .1rem solid  $lightblack;
+              .stars i{
+                color:$orange;      
+              }
+        .price{
+             color:$darkred;
+            //  font-size: 2rem;
+            @include  commonfontsize(2rem);
+             span{
+                color:$grey;
+                // font-size: 1.5rem;
+                @include  commonfontsize(1.5rem);
+                text-decoration: line-through;
+             }
+        }
+          
+     }
+
+    }
+   
+    //overlay
+    & .overlay{
+        position: absolute;
+    top:0; left: 0;
+    height:24rem;
+    width: 100%;
+    background:$lightblack;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+
+      a{
+        font-size: 2rem;
+        padding:1.5rem 2rem;
+        background:$white;
+        color:$grey;
+        margin:1rem;
+        transform: translateY(-15rem);
+        transition-delay: calc(.1s * var(1));
+
+        &:hover{
+            color:$lightblue;
+        }
+      }
+    }
+     
+    &:hover  .overlay{
+        transform: scale(1);
+
+        a{
+            transform: translateY(0rem);
+        }
+    }
+
+    .button{
+       
+        height: 2.188rem;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid $lightgrey;
+        width: 6.375rem;
+        background: $lightgrey;
+        color: $white;
+        margin-left: 1.375rem;
+    }
+ }
+
+
+}
+.productImage{
+    display: flex;
+    gap:1em;
+    position:fixed;
+    flex-wrap: wrap;
+    bottom: 0;
+    width: 85%;
+    padding-right: 2rem ;
+    height:fit-content;
+    z-index:999;
+    overflow: overlay;
+    background-color: $white;
+    padding-left:3rem;
+    
+   
+}
+
+    @include media-sm{
+        .common{
+            width: 12.938rem;
+
+            &:hover{
+                transform: scale(1.1);
+                .store-item{
+                    img{
+                       
+                        @include commontranslate(-2em);
+                    }
+                }
+                & .item-info{
+                    
+                    @include commonopacity(1,2em);
+                    @include commontranslate(-5em);
+                   
+              }
+            }
+
+        }
+
+        .productImage{
+            padding-left:0;
+        }
+}

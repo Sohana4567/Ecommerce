@@ -1,0 +1,72 @@
+@import '../productcompare/variable';
+@import '../productcompare/mixin';
+    .Compareproduct{
+        display: flex;
+        overflow-y: hidden;
+        overflow-x: auto;
+        width: calc(100% - 100px);
+       gap:19px;
+    }
+    .Imageproduct{
+        background-color: $white;
+        
+        box-shadow: 0px 5px 17px -7px $darkblack;
+        text-align: center;
+        position: relative;
+        width:240px;
+        
+         & img{
+             height:153px;
+         }
+         figcaption{
+             .heading{
+                color:$darkblue;
+             font-size: 2rem;
+             }
+             .price{
+                color:$darkred;
+                font-size: 1rem;
+   
+                span{
+                   color:$grey;
+                   font-size: 1rem;
+                   text-decoration: line-through;
+                }
+             }
+         }
+    }
+    .productbutton{
+        position:absolute;
+        z-index:99999;
+        top:0;
+        right:0;
+        width:100px;
+        
+        height:100%;
+
+        .button{
+       
+            height: 35px;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid $lightgrey;
+            width: 70px;
+            background: $lightgrey;
+            color: $white;
+          margin-bottom:22px;
+        }
+        .comparecount{
+            h1{
+                font-size: 2.2rem;
+            }
+        }
+   }
+
+
+#CloseButton{
+    color:$red;
+   position:absolute;
+   top:1rem;
+   right:1rem;
+  cursor: pointer;
+}

@@ -1,0 +1,120 @@
+@import '../productlink/variable';
+@import '../productlink/mixin';
+@import '../productlink/media';
+.menu-link{
+    grid-column: 3/4;
+
+    & ul{
+        height: 10rem;
+       
+         gap:80px;
+        @include commonflex(space-evenly,center);
+        & li{
+            
+            @include commonfontproblem(3.5rem);
+
+            & a{
+                text-transform: capitalize;
+               
+                transition: 0.5s;
+                color: $white;
+                position: relative;
+
+                &::before{
+                   
+                    @include commonabsolute;
+                    top:0;
+                    left:0;
+                    border-top: 2px solid  $yellow;
+                    border-left: 2px solid  $yellow;
+                }
+                &::after{
+                   
+                    @include commonabsolute;
+                    transform-origin: left;
+                    box-sizing: border-box;
+                    bottom:0;
+                    right:0;
+                    border-bottom: 2px solid $yellow;
+                    border-right: 2px solid  $yellow;
+                }
+                &:hover:before,&:hover:after{
+                    
+                    @include commonwidthheight((110% - 100%),(120% - 100%));
+                    transform: rotate(360deg);
+                }
+            }
+           
+
+        }
+        
+    }
+    
+
+}
+
+    @include media-md{
+        
+        .menu-link{
+            position:absolute;
+            top:7.2em;
+            display: none;
+            
+            @include commonwidthheight(100vw,13rem);
+           z-index: 1;
+           background-color:$white;
+          
+          
+           align-items:center;
+           padding-left: 3rem;
+            transition:display 1s linear;
+
+            ul{
+               
+               @include commonflex(space-around,start);
+                flex-direction: column;
+               li:first-child{
+                    transition-delay: 0s;
+                }
+                li{
+                    a{
+                        color: $red;
+                    }
+                    a:hover:before,a:hover:after{
+                        
+                    @include commonwidthheight(unset,unset);
+
+                      transform: rotate(0deg);
+                    }
+                }
+            }
+            &.active{
+                display: block;
+            }
+        }
+        
+    }
+    
+    @include media-lg{
+        :root{
+            
+         @include commonfontproblem(10px);
+        }
+        .menu-link{
+              & ul{
+               
+                @include commonwidthheight(0,7rem);
+                    
+                    @include commonflex(space-evenly,center);
+                    gap: 1rem;
+                    & li{
+                        
+                        @include commonfontproblem(2rem);
+                        a{
+                            color: $red;
+                        }
+                    }
+              }
+            
+        }
+    }

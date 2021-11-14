@@ -1,0 +1,23 @@
+@import '../product/variable';
+@import '../product/mixin';
+
+.product{
+    padding:2rem 7%;
+
+    .productheadin{
+        & h1{
+           
+            margin-top: 2rem;
+            @include commonfontsize(4rem,center);
+            color: $black;
+            font-family:'Rowdies',cursive;
+         }
+     }
+}
+
+.loader{
+    
+    @include commonfontsize(2rem,center);
+    color:$red;
+   
+}

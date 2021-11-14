@@ -1,0 +1,249 @@
+@import '../productdetails/variable';
+@import '../productdetails/media';
+
+.back{
+    font-size: 4rem;
+    background:$white;
+    color:$grey;
+    transform: translateY(5rem);
+   border:none;
+
+    &:hover{
+        color:$light;
+    }
+}
+.detail-wrap{
+   
+    width: 91%;
+    display: flex;
+    
+    justify-content: center;
+    gap:12em;
+    height: 65em;
+
+    .text{
+        flex-grow: 2;
+       
+      margin-top:4.938rem;
+       
+         & .product-title{
+            
+             font-size: 3rem;
+             text-transform: capitalize;
+             font-weight: map-get($font-weights, bold);
+            
+             color: $blue;
+             font-family: 'Oxygen', sans-serif;
+         }
+         & .product-link{
+             text-decoration: none;
+         text-transform: uppercase;
+         font-weight: map-get($font-weights, regular);
+         font-size: 0.9rem;
+         display: inline-block;
+         margin-bottom: 0.5rem;
+         background: $lightblue;
+         color: $white;
+         padding: 0.875rem  2.3rem;
+         transition: all 0.5s ease;
+         margin:0.813rem;
+         }
+         & .product-link:hover{
+             opacity: 0.9;
+         }
+         & .heading{
+             line-height: 1.5;
+             font-size: 2rem;
+             text-transform: capitalize;
+             font-weight: map-get($font-weights,bold);
+             color: $blue;
+             font-family: 'Oxygen', sans-serif;
+         }
+         
+         & button{
+             padding:0.625rem  2.813rem;
+            
+             border:2px solid $darkblue;
+             border-radius: 0.313rem;
+             color:$darkblue;
+             font-size: 1rem;
+             text-transform: uppercase;
+             transition-duration: .5s;
+         }
+         & button:hover{
+             background-color: $darkblue;
+             color:$white;
+             cursor:pointer;
+         }
+         .product-detail{
+            & h2{
+           
+            text-transform: capitalize;
+            color: $blue;
+            padding-bottom: 0.6rem;
+            padding-top: 0.813rem;
+            font-family: 'Oxygen', sans-serif;
+           
+            font-size: 1.5rem;
+            font-weight: map-get($font-weights,large);
+            }
+            & .description{
+                font-size: 3rem;
+            
+            opacity: 0.8;
+            padding-bottom: 0.875rem;
+            font-weight: map-get($font-weights,small);
+            }
+            & ul{
+                margin: 1rem 0;
+                font-size: 2.7rem;
+            }
+            & ul li{
+                margin: 0;
+                list-style: none;
+              
+                background-size: 1.125rem;
+                padding-left: 1.7rem;
+                margin: 0.4rem 0;
+                font-weight: map-get($font-weights,extramedium);
+                opacity: 0.9;
+            }
+            & ul li span{
+                font-weight: map-get($font-weights,regular);
+            }
+        }
+        .product-price{
+            margin: 2rem 0;
+            font-size: 3rem;
+            font-weight: map-get($font-weights,mediumsmall);
+            & p{
+                color: $lightblue;
+            }
+            & .mark{
+                color: $red;
+            }
+        }
+     }
+}
+
+.star{
+ cursor: pointer;
+}
+@include media-lg{
+    .detail-wrap{
+         flex-wrap: wrap;
+      
+        .text{
+              text-align: center;
+            margin-top:0;
+                & .product-title{
+                   
+                    font-size: 3rem;
+                    text-transform: capitalize;
+                    font-weight: 700;
+                    
+                    color: $blue;
+                    font-family: 'Oxygen', sans-serif;
+                }
+                
+                & .product-link{
+                    text-decoration: none;
+                text-transform: uppercase;
+                font-weight: 400;
+                font-size: 0.9rem;
+                display: inline-block;
+                margin-bottom: 0.5rem;
+                background: $lightblue;
+                color: $white;
+                padding: 0.875rem  2.3rem;
+                transition: all 0.5s ease;
+                margin:0.813rem;
+                }
+                & .product-link:hover{
+                    opacity: 0.9;
+                }
+                & .heading{
+                    
+                    line-height: 1.5;
+                    font-size: 2rem;
+                    text-transform: capitalize;
+                  
+                    font-weight: map-get($font-weights,bold);
+                    color: #12263a;
+                    font-family: 'Oxygen', sans-serif;
+                }
+                
+                & button{
+                    padding:0.625rem  2.813rem;
+                   
+                    border:2px solid $darkblue;
+                    border-radius: 5px;
+                    color:$darkblue;
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                    transition-duration: .5s;
+                }
+                & button:hover{
+                    background-color: $darkblue;
+                    color:$white;
+                    cursor:pointer;
+                }
+                .product-detail{
+                    & h2{
+                    
+                    text-transform: capitalize;
+                    color: $blue;
+                    padding-bottom: 0.6rem;
+                    padding-top: 0.813rem;
+                    font-family: 'Oxygen', sans-serif;
+                   
+                    font-size: 1.5rem;
+                    
+                    font-weight: map-get($font-weights,large);
+                    }
+                    & .description{
+                       
+                        font-size: 2rem;
+                    opacity: 0.8;
+                    padding-bottom: 0.875rem;
+                    
+                    font-weight: map-get($font-weights,small);
+                    }
+                    & ul{
+                        margin: 1rem 0;
+                        font-size: 2.7rem;
+                    }
+                    & ul li{
+                        margin: 0;
+                        list-style: none;
+                      
+                        background-size: 18px;
+                        padding-left: 1.7rem;
+                        margin: 0.4rem 0;
+                      
+                        font-weight: map-get($font-weights,extramedium);
+                        opacity: 0.9;
+                    }
+                    & ul li span{
+                       
+                        font-weight: map-get($font-weights,regular);
+                    }
+                }
+                .product-price{
+                    margin: 2rem 0;
+                    font-size: 3rem;
+                   
+                    font-weight: map-get($font-weights,mediumsmall);
+                    & p{
+                        color:$lightblue;
+                    }
+                    & .mark{
+                        color:$red;
+                    }
+                }
+            }
+    }
+    
+      
+       
+}

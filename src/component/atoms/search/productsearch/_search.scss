@@ -1,0 +1,46 @@
+@import '../productsearch/mixin';
+@import '../productsearch/media';
+@import '../productsearch/variable';
+ .inputareawrap{
+    @include commondisplay(relative,flex); 
+     justify-content: center;
+     align-items: center;
+
+     & .searchText{
+        @include  commonwidth(0rem);
+        @include commonborderradius(5rem);
+        border:none;
+        @include commonoutline();
+        transition:all 0.2s linear;
+        &:focus{    
+          @include commonoutline();
+        }
+     }
+     .searchBtn{
+        @include  commonwidth(3rem);
+        height:3rem;
+        background-color: $lightblue;
+        color:$white;
+        position: absolute;
+         display: grid;
+        right:0rem;
+        place-items: center;
+        @include commonborderradius(50%);
+     }
+     &:hover > .searchText{
+        @include  commonwidth(25rem);
+        padding:0.5rem;
+        box-shadow: 0 2rem 2rem -1.5rem  $darkblack;
+         }
+         &:hover>.searchBtn{
+           background: $white;
+           color: $royalblue;
+         }
+}
+@include media-lg{
+    .inputareawrap{
+        &:hover > .searchText{
+          @include  commonwidth(10rem);
+        }
+      }
+}

@@ -1,0 +1,27 @@
+@mixin commonflexprob($par1,$par2){
+    display: flex;
+    flex-direction: $par1;
+    justify-content:$par2;
+}
+@mixin  commontranslate($par1) {
+    transform: translateY($par1); 
+}
+@mixin commonborder($par1,$par2){
+   width: $par1;
+    border-radius:$par2;
+}
+@mixin  commonfont($par1,$par2,$par3) {
+    font-size: $par1;
+    text-transform: $par2;
+    font-weight: $par3;
+}
+@mixin commonopacity($par1,$par2){
+    opacity:$par1;
+ line-height:$par2;
+}
+@mixin  commonpading($par1,$par2) {
+    padding:$par1  $par2;
+}
+@mixin commonfontsize($par1){
+    font-size: $par1;
+}

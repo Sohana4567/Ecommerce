@@ -1,0 +1,5 @@
+@mixin common($par1,$par2){
+    height:$par1;
+ 
+  grid-template-columns: $par2;
+}

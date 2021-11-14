@@ -1,0 +1,4 @@
+@mixin  commonfontsize($par1,$par2) {
+    font-size:$par1;
+    text-align: $par2;
+}

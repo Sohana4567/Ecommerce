@@ -1,0 +1,29 @@
+@import './mixin';
+@import './media';
+.contain{
+   
+    text-align: center;
+        flex-grow: 1;
+       @include commonmargin(3.125rem,8.75rem);
+        & img{
+            align-self: center;
+           
+            @include commonheightwidth(46em,0.625rem);
+            text-align:center;
+        }
+        
+    }
+    
+    @include media-lg{
+        .contain{
+           
+                @include commonmargin(3.125rem,10em);
+                & img{
+                   
+                    @include commonheightwidth(38em,0.625rem);
+                    
+                }
+               
+            }
+           
+    }

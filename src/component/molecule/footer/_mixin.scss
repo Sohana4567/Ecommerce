@@ -1,0 +1,4 @@
+@mixin  commonfont($par1,$par2) {
+    font-size: $par1;
+    line-height: $par2;
+}

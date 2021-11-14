@@ -1,0 +1,28 @@
+@import './mixincard';
+@import './media';
+.centerdiv{
+
+   @include  flexproblem;
+
+    .productcontainer{
+        margin-right:2rem;
+        margin-top:3rem;
+        .productimage{
+            & figure img{
+                width:100%;
+                 height:32rem;
+                 border-radius: 1rem;
+            }
+            &  figure:hover img{
+                transform:scale(1.0);
+              opacity: .4;
+            }
+        }
+    }
+}
+
+@include  media-sm{
+    .centerdiv{
+        padding-left: 2rem;
+    }
+}

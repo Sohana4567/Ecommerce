@@ -1,0 +1,13 @@
+@mixin commonwidth($par1){
+    width:$par1;
+}
+@mixin commonborderradius($par1){
+    border-radius:$par1;
+}
+@mixin commonoutline(){
+    outline:none;
+}
+@mixin commondisplay($par1,$par2){
+    position: $par1;
+    display: $par2;
+}

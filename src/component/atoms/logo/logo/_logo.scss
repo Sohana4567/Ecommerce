@@ -1,0 +1,50 @@
+@import '../logo/variable';
+@import '../logo/mixin';
+@import '../logo/media';
+.logo{
+    display: grid;
+  grid-column: 2/3;
+  justify-content: start;
+  align-items: center;
+ 
+  & .headerlogo{
+   
+    color:$white;
+    
+    @include  font(5rem);
+    animation:headerlogo 1.5s ease-in-out  infinite alternate;
+  }
+ @keyframes headerlogo{
+     from{
+         text-shadow: 0 0 10px $darkwhite,0 0 20px $darkwhite, 0 0 30px $red,0 0 40px $red,0 0 50px  $red,0 0 60px $red,0 0 70px $red;
+     }
+     to{
+         text-shadow:0 0 20px $darkwhite,0 0 30px $lightpink, 0 0 40px $lightpink,0 0 50px $lightpink,0 0 60px  $lightpink,0 0 70px  $lightpink,0 0 80px  $lightpink; 
+     }
+ }
+}
+@include media-md {
+    body{
+        
+        @include font(8px);
+    }
+    .logo{
+        
+    height:8rem;
+     
+     & .headerlogo{
+        @include font(3rem);
+     }
+    }
+    
+    
+    }
+    @include media-lg{
+        .logo{
+            height:7rem;
+            & h2{
+                @include font(1.5rem);
+            }
+        }
+       
+    }

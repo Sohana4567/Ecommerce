@@ -1,0 +1,4 @@
+@mixin  commonwidth($par1,$par2) {
+    font-size: $par1;
+        max-width:$par2;
+}

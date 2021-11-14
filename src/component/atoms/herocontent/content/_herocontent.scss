@@ -1,0 +1,16 @@
+@import '../content/variable';
+@import '../content/mixin';
+.content{
+    &  h1{
+       
+        @include commonwidth(5rem,10rem);
+        text-decoration: uppercase;
+        background-color: $indigo;
+        color:$red;
+     }
+     & p{
+        
+        @include commonwidth(2rem,19rem);
+         color:$lightwhite;
+     }
+}

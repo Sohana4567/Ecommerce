@@ -1,0 +1,50 @@
+@import '../comparelaptop/variable';
+@import '../comparelaptop/mixin';
+@import '../comparelaptop/media';
+ .prev{
+    font-size: 4rem;
+    background:$white;
+    color:$grey;
+    transform: translateY(5rem);
+   border:none;
+
+    &:hover{
+        color:$light;
+    }
+  }
+
+.compareheading{
+    & h1{
+       
+     @include  commonmargin(2rem,4rem);
+    text-align: center;
+        color: $black;
+        font-family:'Rowdies',cursive;
+     }
+     & h3{
+        @include  commonmargin(3rem,2rem);
+         text-align: center;
+        
+     }
+     .count{
+         color:$red;
+     }
+ }
+
+.Image{
+   
+    @include  commonwidth(95%);
+    margin:auto;
+}
+.container{
+    text-align: center;
+    margin-top: 57px;
+
+}
+
+
+@include media-lg{
+    .Image{
+        @include  commonwidth(100%);
+    }
+}

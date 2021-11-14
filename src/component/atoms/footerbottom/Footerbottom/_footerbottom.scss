@@ -1,0 +1,20 @@
+@import './variable';
+@import  './mixin';
+
+.footerbottom{
+    background:$black;
+    padding:1.25rem 0;
+    text-align: center;
+
+    & p{
+        font-size: 13.375rem - 12.5rem;
+        word-spacing: 12.625rem - 12.5rem;
+    @include  texttransform(capitalize);
+    }
+    & span{
+    
+    @include  texttransform(uppercase);
+    opacity: .4;
+    font-weight: 200;
+    }
+}

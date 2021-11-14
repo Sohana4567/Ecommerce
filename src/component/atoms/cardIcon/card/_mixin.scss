@@ -1,0 +1,29 @@
+@mixin flexprob{
+    display: flex;
+    justify-content: flex-end;
+}
+@mixin absoluteprob($par1){
+    position: absolute;
+    top:$par1;
+}
+@mixin  fontsize($par1) {
+    font-size: $par1;
+}
+@mixin  floatright($par1) {
+    width:90%;
+    float: right;
+    margin-top:$par1;
+}
+@mixin commonwidth($par1){
+    width:$par1;
+}
+@mixin commonborderradius($par1){
+    border-radius:$par1;
+}
+@mixin commonoutline(){
+    outline:none;
+}
+@mixin commondisplay($par1,$par2){
+    position: $par1;
+    display: $par2;
+}

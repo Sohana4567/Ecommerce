@@ -1,0 +1,22 @@
+@import '../home/variable';
+.hero-section{
+ min-height: 60vh;
+ width:86%;
+ display:flex;
+ align-items: center;
+ background:url(../../../laptop.jpg) no-repeat;
+ background-size: cover;
+ padding:2rem 7%;
+ filter:brightness(calc(100% - 8%));
+}
+
+.productheading{
+    h1{
+        text-align: center;
+        font-size: 4rem;
+        color:$black;
+        margin-top:4rem;
+        margin-bottom:2rem;
+        font-family: 'Rowdies',cursive;
+    }
+}

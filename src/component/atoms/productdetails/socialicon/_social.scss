@@ -1,0 +1,38 @@
+@import './variable';
+@import './mixinsocial';
+@import './media';
+.social-links{
+    @include commonflex(center);
+ margin: 1.75rem;
+ & p{
+  
+    @include fontsize(2rem);
+ }
+    & a{
+    
+    @include commonflex(center);
+    justify-content: center;
+    
+    @include commonwidthheight;
+    color: $black;
+    border: 1px solid $black;
+    @include commonborder;
+    @include  fontsize(0.8rem);
+    transition: all 0.5s ease;
+
+    &:hover{
+        background: $black;
+        border-color: transparent;
+        color: $white;
+    }
+    }
+    
+}
+@include media-lg{
+    .social-links{
+        
+     & p{
+        @include  fontsize(1.25rem);
+     }
+    }
+}

@@ -1,0 +1,10 @@
+@mixin commonmargin($par1,$par2) {
+    
+    margin-top: $par1;
+    padding-left:$par2;
+}
+@mixin  commonheightwidth($par2,$par3) {
+   
+    height: $par2;
+    border-radius: $par3;
+}

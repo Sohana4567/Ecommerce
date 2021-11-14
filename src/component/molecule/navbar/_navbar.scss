@@ -1,0 +1,30 @@
+@import '../navbar/variable';
+@import '../navbar/mixin';
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+html{
+    font-size: 62.5%;
+}
+.main-nav{
+    display: grid;
+  width:100%;
+@include  common(10rem,10rem 1fr 2fr 1fr 10rem);
+  box-shadow: $lightblack 0px 50px 100px -20px,
+  $darkblack 0px 30px 60px -30px;
+    background-color: $black;  
+}
+@media(max-width:1080px){
+    .main-nav{
+        @include  common(8rem,2rem 3fr 3fr 1fr);
+    }  
+}
+@media(max-width:998px){
+    .main-nav{
+        @include  common(7rem,2rem 2fr 3fr 2rem 2rem);
+    }
+    
+}

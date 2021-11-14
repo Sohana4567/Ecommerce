@@ -1,0 +1,7 @@
+@mixin commonwidthheight($par1,$par2) {
+    width:$par1;
+    height: $par2;
+}
+@mixin commonfont($par1){
+    font-size: $par1;
+}

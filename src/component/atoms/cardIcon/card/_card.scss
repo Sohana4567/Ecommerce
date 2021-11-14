@@ -1,0 +1,55 @@
+@import "../card/variable";
+@import "../card/mixin";
+@import "../card/media";
+.right{
+    
+    @include floatright(5rem);
+    @include flexprob;
+
+    .cart-wrap{
+      color: $white;  
+       @include fontsize(3rem);
+       transform: translateY(-1rem);
+    }
+    .card-length{
+      color:$white;
+       @include  absoluteprob(2rem);
+      @include  fontsize(2rem);
+
+    
+    }
+    .hamburger-menu{
+      display: none;
+      @include  fontsize(3rem);
+      color:$white;
+    }
+    a{
+      &:hover{
+        text-decoration: none;
+      }
+    }
+
+}
+
+@include media-lg{
+
+  .right{  
+    @include floatright(3rem);
+    @include flexprob;
+    gap:0.5rem;
+
+    .card-length {
+      color: $white;   
+      @include absoluteprob(0rem);
+      @include  fontsize(2rem);
+
+  }
+
+  .hamburger-menu{
+    display: block;
+    @include  fontsize(2.5rem);
+     color:$white;
+  }
+  
+  }
+}
